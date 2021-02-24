@@ -1,0 +1,153 @@
+body {
+    background-color: #999;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    grid-template-areas: 
+    'header header header'
+    'hero hero hero'
+    'hero hero hero'
+    'testimonials testimonials ads'
+    'testimonials testimonials ads'
+    'services services ads'
+    'freelance freelance ads'
+    'footer footer footer';
+}
+
+body > * {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.header {
+    border: 2px solid black;
+    grid-area: header;
+}
+
+.header_boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content:space-between;
+    gap: 300px
+}
+
+.header_boxes > div {
+    border: 2px solid red;
+    padding: 20px 15px;
+}
+
+.hero {
+    border: 2px solid black;
+    grid-area: hero;
+}
+
+.ads {
+    border: 2px solid black;
+    grid-area: ads;
+    display: grid;
+    align-content: center;
+}
+
+.services {
+    border: 2px solid black;
+    grid-area: services;
+}
+
+.services_boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content:space-between;
+    gap: 50px;
+}
+
+.services_boxes > div {
+    border: 2px solid red;
+    padding: 20px 50px;
+}
+
+
+.freelance {
+    border: 2px solid black;
+    grid-area: freelance;
+}
+
+.testimonials {
+    border: 2px solid black;
+    grid-area: testimonials;
+
+}
+
+.testimonials_boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content:space-between;
+    gap: 100px;
+}
+
+.testimonials_boxes > div {
+    border: 2px solid red;
+    padding: 20px 100px;
+}
+
+.footer {
+    border: 2px solid black;
+    grid-area: footer;
+}
+
+
+@media (max-width: 992px){
+    body {
+        grid-template-areas: 
+        'header header'
+        'hero hero'
+        'hero hero'
+        'services services'
+        'testimonials testimonials'
+        'freelance freelance'
+        'footer footer';
+    }
+    .header_boxes {
+        grid-template-columns: 1fr 1fr;
+        justify-content:space-between;
+        gap: 200px
+    }
+    .ads {
+        display: none;
+    }
+    .nav {
+        display: none;
+    }
+}
+
+@media (max-width: 592px) {
+    body {
+        grid-template-areas: 
+        'header'
+        'hero'
+        'services'
+        'freelance'
+        'testimonials'
+        'footer'
+        'nav';
+    }
+    .header_boxes {
+        display: none;
+    }
+    .services_boxes {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .testimonials_boxes {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .nav {
+        display: grid;
+        border: 2px solid green;
+        grid-area: nav;
+        /* display: grid;
+        grid-area: nav;
+        border: 2px solid black;
+        padding: 100px; */
+    }
+}
