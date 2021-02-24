@@ -7,10 +7,10 @@ body {
     'header header header'
     'hero hero hero'
     'hero hero hero'
-    'testimonials testimonials ads'
-    'testimonials testimonials ads'
-    'services services ads'
-    'freelance freelance ads'
+    'testimonials ads ads'
+    'testimonials ads ads'
+    'services ads ads'
+    'freelance ads ads'
     'footer footer footer';
 }
 
@@ -49,6 +49,7 @@ body > * {
     border: 2px solid black;
     grid-area: ads;
     display: grid;
+    min-width: 300px;
     align-content: center;
 }
 
@@ -64,9 +65,10 @@ body > * {
     gap: 50px;
 }
 
-.services_boxes > div {
+.services_boxes > .service-box {
     border: 2px solid red;
     padding: 20px 50px;
+    min-height: 200px;
 }
 
 
@@ -78,7 +80,6 @@ body > * {
 .testimonials {
     border: 2px solid black;
     grid-area: testimonials;
-
 }
 
 .testimonials_boxes {
@@ -91,6 +92,7 @@ body > * {
 .testimonials_boxes > div {
     border: 2px solid red;
     padding: 20px 100px;
+    min-height: 200px;
 }
 
 .footer {
@@ -121,6 +123,22 @@ body > * {
     .nav {
         display: none;
     }
+    .services_boxes,
+    .testimonials_boxes{
+        gap: 40px;
+    }
+    .services_boxes > .service-box,
+    .testimonials_boxes > .testimonials-box{
+        min-height: 100px;
+    }
+
+    .services_boxes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service-box:last-child {
+        display: none;
+    }
 }
 
 @media (max-width: 592px) {
@@ -141,6 +159,10 @@ body > * {
     .testimonials_boxes{
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+    .services_boxes > .service-box,
+    .testimonials_boxes > .testimonials-box{
+        min-height: 50px;
     }
     
     .navigation {
