@@ -17,10 +17,7 @@ body {
 body > * {
     padding: 60px 20px;
     text-align: center;
-}
 
-.navigation {
-    display: none;
 }
 
 .header {
@@ -153,8 +150,7 @@ body > * {
         'services'
         'freelance'
         'testimonials'
-        'footer'
-        'nav';
+        'footer';
     }
     .header_boxes {
         display: none;
@@ -169,11 +165,21 @@ body > * {
         min-height: 50px;
     }
     
-    .navigation {
-        display: grid;
-        grid-area: nav;
+    .header .nav {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
         border: 2px solid black;
-        padding: 60px 20px;
-        text-align: center;
+        background-color: #ccc;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: #ccc;
     }
 }
