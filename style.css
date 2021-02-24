@@ -19,6 +19,10 @@ body > * {
     text-align: center;
 }
 
+.navigation {
+    display: none;
+}
+
 .header {
     border: 2px solid black;
     grid-area: header;
@@ -133,21 +137,17 @@ body > * {
     .header_boxes {
         display: none;
     }
-    .services_boxes {
+    .services_boxes,
+    .testimonials_boxes{
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    .testimonials_boxes {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .nav {
+    
+    .navigation {
         display: grid;
-        border: 2px solid green;
-        grid-area: nav;
-        /* display: grid;
         grid-area: nav;
         border: 2px solid black;
-        padding: 100px; */
+        padding: 60px 20px;
+        text-align: center;
     }
 }
