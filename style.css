@@ -32,12 +32,14 @@ body > * {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content:space-between;
-    gap: 300px
+    gap: 300px;
+    
 }
 
 .header_boxes > div {
     border: 2px solid red;
     padding: 20px 15px;
+    background-color: #ccc;
 }
 
 .hero {
@@ -69,6 +71,7 @@ body > * {
     border: 2px solid red;
     padding: 20px 50px;
     min-height: 200px;
+    background-color: #ccc;
 }
 
 
@@ -93,6 +96,7 @@ body > * {
     border: 2px solid red;
     padding: 20px 100px;
     min-height: 200px;
+    background-color: #ccc;
 }
 
 .footer {
